@@ -83,7 +83,7 @@ az aks create -n aks-getting-started \
 --output none
 
 # if your SP key is invalid, generate a new one:
-SERVICE_PRINCIPAL_SECRET=(az ad sp credential reset --name $SERVICE_PRINCIPAL | jq -r '.password')
+SERVICE_PRINCIPAL_SECRET=$(az ad sp credential reset --name $SERVICE_PRINCIPAL | jq -r '.password')
 ```
 
 ## Get a kubeconfig for our cluster
